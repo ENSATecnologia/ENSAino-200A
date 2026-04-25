@@ -42,3 +42,32 @@ Since there are no standardized Arduino pinout for this chip family, **MCUdude**
 
 ## Programmers
 Select your microcontroller in the boards menu, then select the clock frequency. You'll have to hit **Burn bootloader** in order to set the correct fuses and upload the correct bootloader. Make sure you connect an **ISP programmer**, and select the correct one in the **Programmers** menu. For time critical operations an external oscillator is recommended.
+
+<!-- ENSA-AUDIT-README:START -->
+
+---
+
+## 🔍 Visao Geral Tecnica
+
+Projeto de hardware/documentacao para expansao ENSAino, com esquematico, PCB, BOM, Gerber e arquivo de pinout.
+
+## 🛠 Status da Auditoria
+
+- ✅ Artefatos de hardware e pinout analisados.
+- ⚠️ Nenhuma alteracao aplicada por seguranca de fabricacao.
+- 📦 Gerbers usam nomes `PCU-IOT-200A V1.1`, diferentes do nome do projeto.
+
+## ⚠️ Pontos de Atencao
+
+- `ENSAino-200A - Pinout.ino` e documentacao de pinagem, nao sketch compilavel.
+- Ha inconsistencias de comentarios em sinais como `WIEGAND_1D0/1D1` e `LED_AMARELO2`.
+- Revisar metadados de `3V3` herdados de simbolo antigo.
+- Formalizar processo de geracao de Gerber/BOM/PDF.
+
+## 🚀 Proximos Passos
+
+1. Converter pinout em `PINOUT.md` ou sketch real de teste.
+2. Regenerar pacote Gerber com nome correto do produto.
+3. Adicionar checklist de bring-up e fabricacao.
+
+<!-- ENSA-AUDIT-README:END -->
